@@ -12,3 +12,15 @@ def character_count(text):
             else:
                 counts[character] = 1
         return counts
+
+def sort_on(counts):
+      return counts["num"]
+
+def dictionary_sort(counts):
+      list_of_char_counts = []
+      for char, count in counts.items():
+            list_of_char_counts.append({"char": char, "num": count})
+    
+      list_of_char_counts.sort(reverse=True, key=sort_on)
+      return list_of_char_counts
+      
